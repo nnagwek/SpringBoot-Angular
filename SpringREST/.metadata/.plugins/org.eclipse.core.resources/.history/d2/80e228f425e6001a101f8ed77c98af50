@@ -1,0 +1,21 @@
+package com.springbootMongo.CRUD;
+
+public class Customer {
+
+	private String id;
+	private String firstname;
+	private String lastname;
+	public Customer() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	public Customer(String id, String firstname, String lastname) {
+		super();
+		this.id = id;
+		this.firstname = firstname;
+		this.lastname = lastname;
+	}
+	
+	
+	
+}

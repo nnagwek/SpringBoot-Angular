@@ -1,0 +1,5 @@
+package com.springbootMongo.CRUD.api.model;
+
+public class Book {
+
+}

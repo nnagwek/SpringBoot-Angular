@@ -1,0 +1,5 @@
+package com.springAngular.rest.webservices.springAngularrestwebservices.todo;
+
+public class TodoJPARepository {
+
+}

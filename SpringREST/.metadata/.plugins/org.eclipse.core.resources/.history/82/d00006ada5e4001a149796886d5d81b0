@@ -1,0 +1,5 @@
+package com.springAngular.rest.webservices.springAngularrestwebservices.basic.Auth;
+
+public class SpringSecurityConfigurationBasicAuth {
+
+}

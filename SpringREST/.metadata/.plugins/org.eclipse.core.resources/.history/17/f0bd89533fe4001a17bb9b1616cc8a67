@@ -1,0 +1,17 @@
+package codility.examples;
+
+import java.util.Arrays;
+
+public class PermMissingElement {
+
+	public static void main(String[] args) {
+		
+	}
+	public int solution(int[] A) {
+		
+		int len = A.length;
+		Arrays.sort(A);
+		return 0;
+		
+	}
+}

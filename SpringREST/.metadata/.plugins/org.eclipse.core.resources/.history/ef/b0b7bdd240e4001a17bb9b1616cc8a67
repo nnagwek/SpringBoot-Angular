@@ -1,0 +1,27 @@
+package codility.examples;
+
+import java.util.Arrays;
+
+public class PermMissingElement {
+
+	public static void main(String[] args) {
+		
+		int[] A= { 1,2,3,5};
+		int missing_element = solution(A);
+		System.out.println(missing_element);
+	}
+	public static int solution(int[] A) {
+		boolean found = false;
+		int element_found = 0 ;
+		int len = A.length;
+		Arrays.sort(A);
+		for (int j : A) {
+			for(int i=1; i<=(len+1); i++) {
+				if(j==i) {
+					continue;
+				}
+			}
+		}
+		return element_found;
+	}
+}

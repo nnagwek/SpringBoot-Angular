@@ -1,0 +1,7 @@
+package com.springbootMongo.CRUD.api.repository;
+
+import org.springframework.data.mongodb.repository.MongoRepository;
+
+public interface BookRepository extends MongoRepository<T, ID> {
+
+}

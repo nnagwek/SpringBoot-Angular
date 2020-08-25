@@ -1,0 +1,8 @@
+package codility.examples;
+
+public class PermMissingElement {
+
+	public static void main(String[] args) {
+		
+	}
+}
