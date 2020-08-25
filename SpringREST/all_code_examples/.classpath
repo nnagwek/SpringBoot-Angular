@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="application-metrics-example/src"/>
+	<classpathentry kind="src" path="atomic-integer-example/src"/>
+	<classpathentry kind="src" path="atomic-reference-example/src"/>
+	<classpathentry kind="src" path="critical-sections-and-synchronization-example/src"/>
+	<classpathentry kind="src" path="data-races-example/src"/>
+	<classpathentry kind="src" path="deadlocks-example/src"/>
+	<classpathentry kind="src" path="introduction-to-critical-sections-example/src"/>
+	<classpathentry kind="src" path="joining-threads-example/src"/>
+	<classpathentry kind="src" path="optimizing-for-latency-example/src"/>
+	<classpathentry kind="src" path="optimizing-for-throughput-example/src"/>
+	<classpathentry kind="src" path="read-write-lock-example/src"/>
+	<classpathentry kind="src" path="reentrantlock-example/src/main/java"/>
+	<classpathentry kind="src" path="thread-creation-part2-example/src"/>
+	<classpathentry kind="src" path="thread-termination-example/src"/>
+	<classpathentry kind="src" path="threads-creation-part1/src"/>
+	<classpathentry kind="src" path="wait-notify-example/src"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
