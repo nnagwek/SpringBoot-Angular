@@ -1,0 +1,32 @@
+-------------------------------------------------------------------------------------------
+Step-00: Introduction
+-------------------------------------------------------------------------------------------
+Step-01: New GIT branch (usign IDE)
+    - git Branch name: 11-02-SpringBoot-ContentNegotiation
+    - Create new local branch
+-------------------------------------------------------------------------------------------
+Step-02: Test using postman
+  - getAllUsers (GET)
+    - GET /users
+    - Request Header
+      - Accept: application/xml
+-------------------------------------------------------------------------------------------
+Step-03: Add Dependency in pom.xml & Restart Embedded Tomcat
+<dependency>
+  <groupId>com.fasterxml.jackson.dataformat</groupId>
+  <artifactId>jackson-dataformat-xml</artifactId>
+</dependency>
+-------------------------------------------------------------------------------------------
+Step-04: Test using postman
+  - getAllUsers (GET)
+    - GET /users
+    - Request Header
+      - Accept: application/xml
+  - Create User (POST)
+    - POST  /users
+    - Request Header
+      - Content-Type: application/xml
+-------------------------------------------------------------------------------------------
+Step-05: Commit & Push code via IDE
+-------------------------------------------------------------------------------------------
+
