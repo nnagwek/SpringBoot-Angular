@@ -1,0 +1,47 @@
+<h2 class="text-center "><b>MyTodo's</b></h2>
+<div class="container">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <input class="form-control mr-sm-2 navbar-brand" type="search"
+           placeholder="Search Todo with description" 
+           aria-label="Search" [(ngModel)]="nameSearch">
+        </nav>
+      </div>
+<table  class="table" style="text-align:center;">
+    
+    <thead>
+        <tr><div class="alert alert-success" role="alert" *ngIf ="message">{{message}}
+          </div></tr>
+        <tr>
+            <th>Description</th>
+            <th>Target Date</th>
+            <th>Is Completed?</th>
+            <th>Update</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor=" let todo of todos | filter:nameSearch ">
+            <td>{{todo.description}}</td>
+            <td>{{todo.targetDate | date | uppercase }}</td>
+            <td>{{todo.done}}</td>
+            <td><button (click)="updateTodo(todo.id)" class="btn btn-success">Update Todo</button></td>
+            <td><button (click)="deleteTodo(todo.id)" class="btn btn-danger">Delete Todo</button></td>
+        </tr>
+        <tr>
+            <td>
+                <div class="btn" style="text-align:center">
+                    <a routerLink="/welcome" >Back to welcome page</a>
+                </div>
+            </td>
+            <td>
+                <button (click)="addTodo()" class="btn btn-primary">Add Todo</button>
+            </td>
+        </tr>
+        
+    </tbody>
+</table>
+<!-- <div class="text-center" style="text-align:center;">
+    <td><button (click)="addTodo()" class="btn btn-primary">Add Todo</button></td>
+</div> -->
+</div>
