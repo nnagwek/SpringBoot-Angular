@@ -1,0 +1,14 @@
+--------------------------------------------------------------------------------
+Step-00: Course Introduction
+--------------------------------------------------------------------------------
+Step-01: Introduction to RESTful API
+--------------------------------------------------------------------------------
+Step-03: Development Environment Setup
+    - Download Spring Tool Suite 4 from https://spring.io/tools and Install
+    - Clone the project from Github to IDE
+        - Github Link: https://github.com/stacksimplify/springboot-buildingblocks
+    - Import Project to workspace
+    - Checkout any branch from remote to local in IDE as per need.
+    - Download the "Master-RESTful-API-V1.zip" file from Resources section of course.         
+--------------------------------------------------------------------------------
+

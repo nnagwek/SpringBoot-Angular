@@ -1,0 +1,50 @@
+--------------------------------------------------------------------------------------------
+Step-01: SpringBoot Admin server - Base project setup
+    - Create new SpringBoot Project from SpringBoot Initializer
+    - Add Depenedencies
+		<dependency>
+		    <groupId>de.codecentric</groupId>
+		    <artifactId>spring-boot-admin-starter-server</artifactId>
+		    <version>2.1.6</version>
+		</dependency>	
+    - Annotate with @EnableAdminServer for Springboot main application class file. 
+    - Change the port to 9080
+        - application.properties - server.port=9080
+    - Access SpringBoot Admin server    
+        - http://localhost:9080                
+    - References
+        - http://codecentric.github.io/spring-boot-admin/2.1.6/#getting-started
+
+https://codecentric.github.io/spring-boot-admin/2.2.2/#getting-started
+--------------------------------------------------------------------------------------------
+Step-02: Point SpringBoot Client Application (SpringBoot-BuildingBlocks project)
+    - Add SpringBoot Admin client depenedency
+		<dependency>
+		    <groupId>de.codecentric</groupId>
+		    <artifactId>spring-boot-admin-starter-client</artifactId>
+		    <version>2.1.6</version>
+		</dependency>   
+      
+    - application.properties
+        - spring.boot.admin.client.url=http://localhost:9080  
+        - management.endpoints.web.exposure.include=*    
+    - Also supports SpringBoot Cloud Discovery and equivalent client depenedency available too.                   
+    - Add Tags for Instances
+        #using the metadata
+        spring.boot.admin.client.instance.metadata.tags.environment=dev
+        #using the info endpoint
+        info.tags.environment=dev    
+    - Test SpringBoot Admin Server
+--------------------------------------------------------------------------------------------
+Step-03: Test the features in Spring Boot Admin Server
+    - Insights 
+        -> Details - Actuator Health Endpoint
+        -> Metrics - Actuator Metrics Endpoint 
+    - It goes on this way with all actuator endpoints. 
+    - Web 
+        - Http Traces  (Run postman request runner in parallel to monitor)
+--------------------------------------------------------------------------------------------
+Step-04: Commit & Push code via IDE
+--------------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------------------

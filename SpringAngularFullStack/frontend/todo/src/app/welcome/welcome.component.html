@@ -1,0 +1,23 @@
+<div class="container" *ngIf ="welcomeErrorMessage" >
+    <b><span class="alert alert-warning" >{{welcomeErrorMessage}}</span></b>
+</div>
+
+<div class="container">
+<p>welcome {{name}} to Spring -Angular Full Stack!</p>
+   <p>You can manage your todos <a routerLink = "/todos">here</a> </p> 
+</div>
+<!-- 
+<div class="container" >
+    Click Here to get a welcome message<button (click)="getWelcomeMessage()" >Get Welcome Message</button>
+</div>  -->
+
+ <div class="container" >
+    Click Here to get a welcome message with path variable<button (click)="getWelcomeMessageWithPathVariable()" >Get Welcome Message With Path Variable</button>
+</div>
+
+<!-- <div class="container" *ngIf = "welcomeMessageFromService">
+    <h3>Your Customised Welcome message from Service</h3>{{welcomeMessageFromService}} 
+</div> -->
+<div class="container" *ngIf = "welcomeName">
+    <h3>Your Customised Welcome message from Service with path Variable</h3>{{welcomeMessageFromService}} from : {{welcomeName}}
+</div>

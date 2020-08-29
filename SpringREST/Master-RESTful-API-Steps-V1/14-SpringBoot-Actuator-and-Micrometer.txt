@@ -1,0 +1,53 @@
+-------------------------------------------------------------------------------------------
+Step-00: Introduction
+-------------------------------------------------------------------------------------------
+Step-01: New GIT branch (using IDE)
+    - git Branch name: 14-SpringBoot-Actuator-Micrometer
+    - Create new local branch
+-------------------------------------------------------------------------------------------
+Step-02: Add Micrometer depenedency for Metrics.
+		<dependency>
+		    <groupId>io.micrometer</groupId>
+		    <artifactId>micrometer-core</artifactId>
+		    <version>1.2.0</version>
+		</dependency>	
+    - Simple (In-Memory backend -  Fall back option) - by default enabled
+        - To disable: management.metrics.export.simple.enabled=false
+        - http://localhost:8080/actuator/metrics/process.files.open  
+-------------------------------------------------------------------------------------------		
+Step-03: Integrate with JMX  and view metrics in JConsole using JMX (Export Metrics)
+    - Add the JMX dependency.
+	    <dependency>
+		  <groupId>io.micrometer</groupId>
+		  <artifactId>micrometer-registry-jmx</artifactId>
+		  <version>1.2.0</version>
+		</dependency>	
+	- Add JMX property
+		- management.metrics.export.jmx.enabled: true		
+    - Test        			
+        - JVM Threads live
+-------------------------------------------------------------------------------------------		
+Step-04: Integrate with AppOptics to export metrics and View metrics in AppOptics  (Solarwinds product)
+	- AppOptics 
+		- Create a trial user in AppOptics (https://www.appoptics.com/)
+		- Create API Token by navigating to  Settings -> API Tokens
+	- Our SpringBoot Application
+		- Add this token in our project application.properties
+			- management.metrics.export.appoptics.api-token=TOKEN
+		- Add Dependency for AppOptics in pom.xml & restart embedded tomcat
+		<dependency>
+		  <groupId>io.micrometer</groupId>
+		  <artifactId>micrometer-registry-appoptics</artifactId>
+		  <version>1.2.0</version>
+		</dependency>		
+		- Create "MonitoringConfig" file by referring documentation for AppOpticsConfig
+			- https://micrometer.io/docs/registry/appOptics
+		- Restart JVM
+-------------------------------------------------------------------------------------------				
+Step-05: Perform Tests using POSTMAN
+		- Perform "Collection Runner" test via Postman with 1000 requests. 
+		- Verify metrics in Dashboards --> Metrics		
+		- Add some dashboards and show live data flowing.
+-------------------------------------------------------------------------------------------		
+Step-05: Commit & Push code via IDE
+-------------------------------------------------------------------------------------------		
